@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tinashe Toto · Portfolio</title>
+    <meta name="description" content="Personal portfolio" />
+    <link rel="icon" href="./images/fav.png" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="heading name">
+        <span>T</span><span>i</span><span>n</span><span>a</span><span>s</span
+        ><span>h</span><span>e</span> <span>T</span><span>o</span><span>t</span
+        ><span>o</span>
+      </h1>
+      <h2 class="sub-head heading">BCIT CST Student</h2>
+      <nav>
+        <a href="#about">ABOUT</a> | <a href="#skills">SKILLS</a> |
+        <a href="#projects">PROJECTS</a> |
+        <a href="#contact">CONTACT</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="about">
+        <h2 class="main-head">About</h2>
+        <div class="sectiontext">
+          <p>
+            I am a Computer Systems Technology student at BCIT with a growing
+            foundation in software development, networking, systems
+            administration, and cybersecurity. Through coursework, personal
+            projects, and hands-on labs, I am developing practical technical
+            skills and gaining experience with modern technologies.
+          </p>
+          <p>
+            I enjoy building applications, solving technical problems, and
+            continuously expanding my knowledge through self-directed learning.
+          </p>
+          <p>For more information, checkout my resume below!</p>
+
+          <a
+            href="./docs/TinasheResume.pdf"
+            target="_blank"
+            class="btn btn-secondary set"
+            >My Resume</a
+          >
+        </div>
+      </section>
+
+      <section id="skills">
+        <h2 class="main-head">Skills</h2>
+        <ul class="list-group"></ul>
+      </section>
+
+      <section id="projects">
+        <h2 class="main-head">Projects</h2>
+      </section>
+
+      <section id="contact">
+        <h2 class="main-head">Contact</h2>
+        <p>You can view my LinkedIn, GitHub or send me an email.</p>
+
+        <div class="btn-group" role="group" aria-label="Contact links"></div>
+      </section>
+    </main>
+
+    <!-- Modal -->
+    <div class="modal fade" id="projectModal" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Project Details</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <p id="modalDescription"></p>
+
+            <img
+              id="modalImage"
+              src=""
+              alt="Project screenshot"
+              class="img-fluid rounded mt-3"
+            />
+          </div>
+
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
