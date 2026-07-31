@@ -77,23 +77,34 @@ const contacts = [
   {
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/tinashetoto",
+    icon: "bi bi-linkedin",
+    class: "linkedin",
   },
   {
     name: "GitHub",
     url: "https://github.com/nash-ft",
+    icon: "bi bi-github",
+    class: "github",
   },
   {
     name: "Email",
     url: "mailto:ttoto@my.bcit.ca",
+    icon: "bi bi-envelope-fill",
+    class: "email",
   },
 ];
 
 const contactGroup = document.querySelector(".btn-group");
 
+let html = "";
+
 contacts.forEach((contact) => {
-  contactGroup.innerHTML += `
-    <a href="${contact.url}" target="_blank" class="btn btn-secondary btn-lg">
+  html += `
+    <a href="${contact.url}" target="_blank" class="btn btn-secondary ${contact.class} btn-lg">
+      <i class="${contact.icon} me-2"></i>
       ${contact.name}
     </a>
   `;
 });
+
+contactGroup.innerHTML = html;

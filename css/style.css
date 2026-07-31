@@ -135,6 +135,30 @@ nav a:hover {
     border-radius: 10px 10px 0 0;
 }
 
+.btn-group .btn{
+    padding: 12px 20px;
+}
+
+.btn{
+    transition: all .25s ease;
+}
+
+.btn:hover{
+    transform: translateY(-4px);
+}
+
+.linkedin:hover{
+    background:#0A66C2;
+}
+
+.github:hover{
+    background:#24292e;
+}
+
+.email:hover{
+    background:#D44638;
+}
+
 .modal-content {
   background-image: radial-gradient(circle, #4a5378, #1e1d1d);
   color: white;
