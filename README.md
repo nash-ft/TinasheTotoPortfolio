@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-A portfolio website showcasing my projects, technical skills, and interests in software dev, networking, and cybersecurity.
+A portfolio website showcasing my projects, technical skills, and interests in software dev, web dev, networking , and cybersecurity.
 
 ## Webiste
 https://tinashetoto.com
