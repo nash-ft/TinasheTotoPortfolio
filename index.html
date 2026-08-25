@@ -4,9 +4,19 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Tinashe Toto" />
-    <title>Tinashe Toto</title>
-    <meta name="description" content="Personal portfolio" />
+    <title>Tinashe Toto — Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Tinashe Toto, a BCIT Computer Systems Technology student specializing in software development, networking, and cybersecurity."
+    />
+    <meta property="og:title" content="Tinashe Toto — Portfolio" />
+    <meta
+      property="og:description"
+      content="BCIT CST student building practical skills in software development, networking, and cybersecurity."
+    />
+    <meta property="og:type" content="website" />
     <link rel="icon" href="./images/fav.png" />
+
     <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
@@ -14,7 +24,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <!-- Bootsrap Icons -->
+    <!-- Bootstrap Icons -->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
@@ -22,6 +32,8 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
     <header>
       <h1 class="heading name">
         <span>T</span><span>i</span><span>n</span><span>a</span><span>s</span
@@ -29,16 +41,20 @@
         ><span>o</span>
       </h1>
       <h2 class="sub-head heading">BCIT CST Student</h2>
-      <nav>
-        <a href="#about">ABOUT</a> | <a href="#skills">SKILLS</a> |
-        <a href="#projects">PROJECTS</a> |
-        <a href="#contact">CONTACT</a>
+
+      <nav aria-label="Primary">
+        <ul class="nav-list">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </nav>
     </header>
 
-    <main>
-      <section id="about">
-        <h2 class="main-head">About</h2>
+    <main id="main">
+      <section id="about" aria-labelledby="about-heading">
+        <h2 class="main-head" id="about-heading">About</h2>
         <div class="sectiontext">
           <p>
             I am a Computer Systems Technology student at BCIT with a growing
@@ -51,40 +67,52 @@
             I enjoy building applications, solving technical problems, and
             continuously expanding my knowledge through self-directed learning.
           </p>
-          <p>For more information, checkout my resume below!</p>
+          <p>For more information, check out my resume below.</p>
 
           <a
             href="./docs/TinasheResume.pdf"
             target="_blank"
+            rel="noopener"
             class="btn btn-secondary set"
-            >My Resume</a
+            >View My Resume</a
           >
         </div>
       </section>
 
-      <section id="skills">
-        <h2 class="main-head">Skills</h2>
+      <section id="skills" aria-labelledby="skills-heading">
+        <h2 class="main-head" id="skills-heading">Skills</h2>
         <ul class="list-group"></ul>
       </section>
 
-      <section id="projects">
-        <h2 class="main-head">Projects</h2>
+      <section id="projects" aria-labelledby="projects-heading">
+        <h2 class="main-head" id="projects-heading">Projects</h2>
+        <div class="project-grid"></div>
       </section>
 
-      <section id="contact">
-        <h2 class="main-head">Contact</h2>
-        <p>Feel free to connect with me or checkout my work.</p>
+      <section id="contact" aria-labelledby="contact-heading">
+        <h2 class="main-head" id="contact-heading">Contact</h2>
+        <p>Feel free to connect with me or check out my work.</p>
 
         <div class="btn-group" role="group" aria-label="Contact links"></div>
       </section>
     </main>
 
+    <footer>
+      <p>&copy; <span id="year"></span> Tinashe Toto. All rights reserved.</p>
+    </footer>
+
     <!-- Modal -->
-    <div class="modal fade" id="projectModal" tabindex="-1">
+    <div
+      class="modal fade"
+      id="projectModal"
+      tabindex="-1"
+      aria-labelledby="modalTitleLabel"
+      aria-hidden="true"
+    >
       <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Project Details</h5>
+            <h5 class="modal-title" id="modalTitleLabel">Project Details</h5>
             <button
               type="button"
               class="btn-close"
@@ -96,12 +124,7 @@
           <div class="modal-body">
             <p id="modalDescription"></p>
 
-            <img
-              id="modalImage"
-              src=""
-              alt="Project screenshot"
-              class="img-fluid rounded mt-3"
-            />
+            <img id="modalImage" src="" alt="" class="img-fluid rounded mt-3" />
           </div>
 
           <div class="modal-footer">
