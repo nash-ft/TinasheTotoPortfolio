@@ -92,19 +92,16 @@ const contacts = [
     name: "LinkedIn",
     url: "https://www.linkedin.com/in/tinashetoto",
     icon: "bi bi-linkedin",
-    class: "linkedin",
   },
   {
     name: "GitHub",
     url: "https://github.com/nash-ft",
     icon: "bi bi-github",
-    class: "github",
   },
   {
     name: "Email",
     url: "mailto:ttoto@my.bcit.ca",
     icon: "bi bi-envelope-fill",
-    class: "email",
   },
 ];
 
@@ -113,7 +110,7 @@ const contactGroup = document.querySelector(".btn-group");
 contacts.forEach((contact) => {
   const link = document.createElement("a");
   link.href = contact.url;
-  link.className = `btn btn-secondary btn-lg ${contact.class}`;
+  link.className = "btn btn-secondary";
   if (contact.url.startsWith("http")) {
     link.target = "_blank";
     link.rel = "noopener";
