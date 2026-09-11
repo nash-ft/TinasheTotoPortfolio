@@ -214,6 +214,7 @@ h2 {
     font-size: 1.15em;
     font-weight: 600;
     margin: 0 0 8px;
+    color: var(--text);
 }
 
 .card-text {
