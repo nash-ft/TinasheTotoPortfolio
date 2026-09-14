@@ -3,6 +3,7 @@ const skills = [
   "Java",
   "Python",
   "SQL",
+  "C",
   "Web Markup Languages: HTML, CSS",
   "Linux",
   "Networking Fundamentals",
@@ -28,6 +29,7 @@ const projects = [
 
               SunBlock was created by myself, Zyllian James Fran, Harman Kaur, Kelly Bayingana, and Taeu Gim using Bootstrap, Node.js, and MongoDB.`,
     image: "./images/sunblock.jpg",
+    demoLink: "https://two800-202610-bby20.onrender.com/",
   },
 
   {
@@ -40,7 +42,9 @@ const projects = [
               Users can engage in public conversations about different sports.
               
               `,
-    image: "./images/goplay.jpg",
+    image: "./images/goplay1.jpeg",
+    image2: "./images/goplay2.jpeg",
+    demoLink: "https://goplay-k8sq.onrender.com/",
   },
 ];
 
@@ -48,13 +52,7 @@ const projectGrid = document.querySelector("#projects .project-grid");
 
 projects.forEach((project, index) => {
   const card = document.createElement("div");
-  card.className = "card project-card";
-
-  const img = document.createElement("img");
-  img.src = "./images/sunb.png";
-  img.alt = `Screenshot of the ${project.title} project`;
-  img.className = "card-img-top";
-  card.appendChild(img);
+  card.className = "card project-card"; // background color comes from this class in CSS
 
   const body = document.createElement("div");
   body.className = "card-body";
@@ -83,8 +81,10 @@ projects.forEach((project, index) => {
 const modalElement = document.getElementById("projectModal");
 const modal = new bootstrap.Modal(modalElement);
 const modalImage = document.getElementById("modalImage");
+const modalImage2 = document.getElementById("modalImage2");
 const modalTitle = document.getElementById("modalTitleLabel");
 const modalDescription = document.getElementById("modalDescription");
+const modalDemoLink = document.getElementById("modalDemoLink");
 
 document.querySelectorAll(".more-info").forEach((button) => {
   button.addEventListener("click", () => {
@@ -92,8 +92,27 @@ document.querySelectorAll(".more-info").forEach((button) => {
 
     modalTitle.textContent = project.title;
     modalDescription.textContent = project.details;
+
     modalImage.src = project.image;
     modalImage.alt = `Screenshot of the ${project.title} project`;
+    modalImage.style.display = project.image ? "" : "none";
+
+    if (project.image2) {
+      modalImage2.src = project.image2;
+      modalImage2.alt = `Additional screenshot of the ${project.title} project`;
+      modalImage2.style.display = "";
+    } else {
+      modalImage2.src = "";
+      modalImage2.style.display = "none";
+    }
+
+    if (project.demoLink) {
+      modalDemoLink.href = project.demoLink;
+      modalDemoLink.style.display = "";
+    } else {
+      modalDemoLink.href = "";
+      modalDemoLink.style.display = "none";
+    }
 
     modal.show();
   });
