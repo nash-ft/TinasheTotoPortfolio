@@ -29,6 +29,19 @@ const projects = [
               SunBlock was created by myself, Zyllian James Fran, Harman Kaur, Kelly Bayingana, and Taeu Gim using Bootstrap, Node.js, and MongoDB.`,
     image: "./images/sunblock.jpg",
   },
+
+  {
+    title: "GoPlay",
+    description: "A web application that helps its users discover nearby sports facilities.",
+    details: `GoPlay is a web app designed to help users discover nearby sports facilities and activities.
+    
+              It uses geolocation to provide real-time information about sports facilities and suggests nearby activities based on user preferences.
+
+              Users can engage in public conversations about different sports.
+              
+              `,
+    image: "./images/goplay.jpg",
+  },
 ];
 
 const projectGrid = document.querySelector("#projects .project-grid");
